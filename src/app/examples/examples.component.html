@@ -1,0 +1,15 @@
+<input type="text" [(ngModel)]="datoEntrada" value="datoEntrada">
+<button *ngIf="indexToEdit === null" (click)="addElement()">Guardar</button>
+<button *ngIf="indexToEdit !== null" (click)="editElement()">Editar</button>
+<br>
+<table>
+  <tr>
+    <th>Dato ingresado</th>
+    <th>Acciones</th>
+  </tr>
+  <tr *ngFor="let element of lista">
+    <td>{{element}}</td>
+    <td><button (click)="removeItem(element)">Eliminar</button></td>
+    <td><button (click)="selectedToEdit(element)">Editar</button></td>
+  </tr>
+</table>
