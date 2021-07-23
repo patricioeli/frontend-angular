@@ -1,0 +1,7 @@
+.example-container {
+    height: calc(100% - 84px);
+}
+
+.example-drawer {
+    width: 220px;
+}
