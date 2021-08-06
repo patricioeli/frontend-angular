@@ -1,7 +1,7 @@
 <mat-drawer-container #drawerContainer class="example-container" [hasBackdrop]="false">
     <mat-drawer class="example-drawer" #drawer mode="side">
         <mat-action-list>
-            <button *ngFor="let option of options" mat-list-item > 
+            <button [routerLink]="'/users/list'" *ngFor="let option of options" mat-list-item > 
                 {{option}} 
             </button>
           </mat-action-list>          

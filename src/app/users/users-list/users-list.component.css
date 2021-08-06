@@ -1,0 +1,12 @@
+.example-card {
+    margin: 5px;
+}
+
+.table-div > table.mat-table {
+    margin: 5px;
+    width: 99%;
+}
+
+.profile-width {
+    width: 50px;
+}

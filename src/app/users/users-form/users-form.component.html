@@ -1,0 +1,23 @@
+<form #usersForm="ngForm" (ngSubmit)="submitUser(usersForm.form)">
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>Registrar usuario</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Nombre usuario</mat-label>
+        <input matInput placeholder="" ngModel name="username" required>
+      </mat-form-field>
+      <br>
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Contraseña</mat-label>
+        <input matInput placeholder="" ngModel name="password" required>
+      </mat-form-field>
+  </mat-card-content>
+  <mat-card-actions style="text-align: right;">
+    <button mat-raised-button color="primary">Guardar</button>
+    <button mat-raised-button color="warn" [routerLink]="'/users/list'">Cancelar</button>
+  </mat-card-actions>
+</mat-card>
+</form>
+

@@ -10,7 +10,7 @@ export class SidebarComponent implements OnInit, AfterViewInit {
 
   @ViewChild('drawer') drawer!: MatDrawer;
 
-  options: string[] = ['Usuarios', 'Administracion'];
+  options: string[] = ['Usuarios'];
 
   constructor() { }
 
