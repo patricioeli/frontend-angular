@@ -8,13 +8,19 @@ import { User } from '../models/user.model';
 })
 export class UsersService {
 
+  USER_URL = 'api/user';
+
   constructor(private http: HttpClient) { }
 
   saveUser(user: User): Observable<any> {
-    return this.http.post('/users', user);
+    return this.http.post(this.USER_URL+'/save', user);
   }
 
   getAllUser(): Observable<any> {
-    return this.http.get('/users');
+    return this.http.get(this.USER_URL+'/findAll');
+  }
+
+  deleteUser(id: number): Observable<any> {
+    return this.http.delete(this.USER_URL+'/delete?id='+id);
   }
 }
